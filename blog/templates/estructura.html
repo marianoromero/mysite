@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Mi primer Blog en Django</title>
+	<style type="text/css">
+		body{
+			margin:0px;
+			padding:0px;
+			background: rgb(230,230,230);
+		}
+		#contenedor{
+			width: 90%;
+			margin: auto;
+			background: rgb(240,240,240);
+			box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+			padding:15px;
+		}
+		p{
+			text-align: justify;
+			font-family: sans-serif;
+			font-size: 12px;
+			color:rgb(100,100,100);
+		}
+		h1,h2,h3,h4{
+			margin: 0px;
+			padding: 0px;
+			color: rgb(50,50,50);
+			font-family: sans-serif;
+		}
+		article p{
+			padding-left: 20px;
+		}
+		article{
+			border-bottom: 1px dashed grey;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		h1{
+			font-size: 52px;
+		}
+		h2{
+			font-size: 18px;
+			text-decoration: underline;
+		}
+		#articulos{
+			width: 75%;
+			float: left;
+			
+
+		}
+		aside{
+			width: 20%;
+			float: right;
+			background: rgb(220,220,220);
+			padding: 2em;
+			height: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="contenedor">
+		<header>
+			<h1>Mi blog</h1>
+			<h2>Blog de Mariano hecho en Django</h2>
+		</header>
+		<section>
+			<div id="articulos">
+			{% block contenido %}{%endblock%}
+			</div>
+			<aside>
+				<h4>Sobre mi</h4>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</aside>	
+
+		</section>	
+		<div style="clear:both"></div>
+		<footer>
+			(c)2014 Mariano Romero
+
+		</footer>
+	</div>  
+
+</body>
+</html>	
